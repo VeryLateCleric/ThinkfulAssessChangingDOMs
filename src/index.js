@@ -18,13 +18,22 @@ function addHeadings() {
   Write the styleTutorialsAndArticles() function here
 */
 
-function styleTutorialsAndArticles() {}
+function styleTutorialsAndArticles() {
+  const articles = document.querySelectorAll('.articles article');
+  articles.forEach(article => {
+    if (article.textContent.includes('Tutorial')) {
+      article.classList.add('tutorial');
+    } else {
+      article.classList.add('article');
+    }
+  });
+}
 
 /**
   Write the separateAllTutorials() function here
 */
 
-function separateAllTutorials () {}
+function separateAllTutorials() {}
 
 /**
   No need to edit the following
