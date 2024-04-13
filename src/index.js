@@ -33,7 +33,20 @@ function styleTutorialsAndArticles() {
   Write the separateAllTutorials() function here
 */
 
-function separateAllTutorials() {}
+function separateAllTutorials() {
+  const container = document.querySelector('.container');
+  const articlesSection = document.querySelector('.articles');
+  const tutorials = articlesSection.querySelectorAll('.tutorial');
+
+  if (tutorials.length > 0) {
+    const tutorialsSection = document.createElement('section');
+    tutorialsSection.classList.add('tutorials');
+    tutorials.forEach(tutorial => {
+      tutorialsSection.appendChild(tutorial);
+    });
+    container.appendChild(tutorialsSection);
+  }
+}
 
 /**
   No need to edit the following
